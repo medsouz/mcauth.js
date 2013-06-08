@@ -1,0 +1,25 @@
+{
+  "name": "MinecraftAuth",
+  "version": "0.0.1",
+  "description": "",
+  "main": "mcauth.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/medsouz/mcauth.js.git"
+  },
+  "keywords": [
+    "Minecraft",
+    "Auth",
+    "Authorization",
+    "Login",
+    "Account"
+  ],
+  "author": "medsouz",
+  "license": "MIT",
+  "dependencies": {
+    "request": "~2.21.0"
+  }
+}
