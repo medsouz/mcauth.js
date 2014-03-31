@@ -56,6 +56,12 @@ function getMojangProfile(username, func){
 	});
 }
 
+function getPlayerInformation(uuid, func){
+	request('https://sessionserver.mojang.com/session/minecraft/profile/'+uuid, function (error, response, body){
+		func(body);
+	});
+}
+
 function isNameValid(username, func){
 	func(username.match('[A-Za-z0-9_]{2,16}') == username)
 }

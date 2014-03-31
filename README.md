@@ -47,6 +47,16 @@ mcauth.getMojangProfile("medsouz", function(profile) {
 });
 ```
 
+**getPlayerInformation**
+This function takes a UUID and responds with a JSON object containing the player's current username and skin/cape information.
+```javascript
+var mcauth = require("mcauth");
+mcauth.getPlayerInformation("a80dfef48150469f878c0a4d2d8bff3f", function(info){
+    console.log(info.name);//Should output medsouz
+});
+```
+
+
 **isNameValid**
 To run a regexp check to make sure a username is a valid account name for Minecraft you can use mcauth.isNameValid:
 ```javascript
