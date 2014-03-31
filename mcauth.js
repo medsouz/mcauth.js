@@ -42,10 +42,25 @@ function checkSessionId(username, sessionid, func){
 	})
 }
 
+function getMojangProfile(username, func){
+	var options = {
+		uri: 'https://api.mojang.com/profiles/page/1',
+		method: 'POST',
+		json: {
+			agent: 'minecraft'
+		}
+	}
+	options.json.name = username;
+	request(options, function (error, response, body){
+		func(body);
+	});
+}
+
 function isNameValid(username, func){
 	func(username.match('[A-Za-z0-9_]{2,16}') == username)
 }
 
 exports.hasPaid = hasPaid;
 exports.checkSessionId = checkSessionId;
+exports.getMojangProfile = getMojangProfile;
 exports.isNameValid = isNameValid;

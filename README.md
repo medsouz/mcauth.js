@@ -38,6 +38,15 @@ mcauth.checkSessionId("medsouz", "-SessionId Here-", function(valid){
 });
 ```
 
+**getMojangProfile**
+Check a Minecraft username against Mojang's server. This allows you to get the player's UUID. The UUID should be used from now on for identification because coming with the Minecraft 1.8 update Mojang will allow the player to change their username.
+```javascript
+var mcauth = require("mcauth");
+mcauth.getMojangProfile("medsouz", function(profile) {
+        console.log(profile.profiles[0].id);//Should output a80dfef48150469f878c0a4d2d8bff3f
+});
+```
+
 **isNameValid**
 To run a regexp check to make sure a username is a valid account name for Minecraft you can use mcauth.isNameValid:
 ```javascript
