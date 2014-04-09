@@ -69,4 +69,5 @@ function isNameValid(username, func){
 exports.hasPaid = hasPaid;
 exports.checkSessionId = checkSessionId;
 exports.getMojangProfile = getMojangProfile;
+exports.getPlayerInformation = getPlayerInformation;
 exports.isNameValid = isNameValid;
